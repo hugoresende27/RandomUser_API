@@ -1,10 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fruktur&family=Mochiy+Pop+P+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald');
-@import url('https://fonts.googleapis.com/css2?family=Mulish&family=Poppins&display=swap');
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Acme&family=Assistant:wght@200;300&family=Baloo+2&family=Cairo:wght@200;600&family=Caveat:wght@400;700&family=Comforter+Brush&family=Exo+2:wght@100;300&family=Indie+Flower&family=Inter:wght@100;500&family=Lato:wght@100;400&family=M+PLUS+1:wght@100;400&family=M+PLUS+2:wght@100;500&family=M+PLUS+Code+Latin:wght@100;400&family=Merriweather:wght@300;700&family=Open+Sans:wght@300;600&family=Roboto+Slab:wght@100;400&family=Signika:wght@300&display=swap');
 
 :root
 {
@@ -24,8 +19,9 @@
 
 body
 {
-    background-color: var(--charcoal-cor);
-    font-family: 'Poppins',sans-serif;
+    background-color: var(--green-cor);
+    font-family: 'Merriweather',sans-serif;
+    font-weight: 0;
     display: flex;          /*coloca tudo em linha*/
     /*flex-direction: column; /*coloca tudo em coluna*/
     align-items: center;    /*alinha horizontalmente*/
@@ -34,6 +30,82 @@ body
     overflow: hidden; /*BARRA DE SCROLL DOWN, HIDDEN ESCONDIDA*/
     margin: 0;
     overflow-x: hidden; /*REMOVER BARRA DE SCROLL HORIZONTAL*/
+    
+}
+
+.main {
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.4);
+    overflow: hidden;
+    width: 300px;
+}
+
+.titulo {
+    margin: 0;
+}
+
+.subtitle {
+    display: inline-block;
+    margin: 5px 0 20px;
+    opacity: 0.8;
+}
+
+.header {
+    background-color: #3e57db;
+    color: #fff;
+    padding: 30px 20px;
+}
+
+.header input {
+    background-color: rgba(0,0,0,0.3);
+    border: 0;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 15px;
+    width: 100%;
+}
+.header input:focus {
+    outline: none;
+}
+
+.users {
+    background-color: #fff;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.users li{
+    display: flex;
+    padding: 20px;
+}
+
+.users img {
+    border-radius: 50%;
+    object-fit: cover;
+    height: 50px;
+    width: 50px;
+}
+
+.users .user-info {
+    margin-left: 10px;
+}
+.users .user-info h4 {
+    margin: 0 0 10px;
+}
+
+.users .user-info p {
+    font-size: 12px;
+}
+.users li:not(:last-of-type) {/*BORDER PARA TODOS OS <li> DA LISTA MENOS O ÚLTIMO :not(:last-of-type)*/
+    border-bottom: 1px solid #eee;
+}
+
+.users li.hide{
+    display: none;
 }
 
 
@@ -53,6 +125,11 @@ body
 
 }
 
+@media (max-width : 600px)
+{
+
+}
+
 @media (max-width: 800px)
 {
     body{
@@ -66,18 +143,7 @@ body
 
 }
 
-@media (max-width : 600px)
-{
- .codigo{
-     flex-wrap: wrap;
- }   
 
- .cod{
-     font-size: 60px;
-     height: 80px;
-     max-width: 70px;
- }
-}
 
 
 /*estilos do footer */
