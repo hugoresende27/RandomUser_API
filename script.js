@@ -19,7 +19,7 @@ async function getData() {
     res.innerHTML=''//Limpar res
 
     results.forEach( user => {
-        //console.log(user)
+        console.log(user)
         const li = document.createElement('li')
         itensLista.push(li)
         li.innerHTML = `
@@ -27,6 +27,7 @@ async function getData() {
             <div class="user-info">
                 <h4>${user.name.first} ${user.name.last}</h4>
                 <p>${user.location.city}, ${user.location.country}</p>
+                <p>${user.email} <br> ${user.phone}</p>
             </div>
         `
 
